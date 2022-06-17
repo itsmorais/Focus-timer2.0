@@ -1,3 +1,3 @@
-let test = document.querySelector('#bonfire')
-console.log(test.classList.add('bonfire-active'))
+let test = document.querySelector('#forest')
+console.log(test.classList.add('forest-active'))
 
