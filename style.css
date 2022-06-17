@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+body{
+  background-image: url('https://images.unsplash.com/photo-1625293961325-170b642843dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+:root{
+  --ff-medium:'Roboto', sans-serif;
+  --fc-general:hsla(240, 6%, 21%, 1);
+
+  --bg-color:rgba(117, 85, 126, 0.174);
+  font-size: 62.5%;
+
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 100vh;
+    
+}
+
+.timer-controls{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+
+}
+
+
+.timer span{
+
+  font-family: var(--ff-medium);
+  font-size: clamp(2rem, 2rem + 10vw, 12.6rem); 
+  color: #323238;
+  
+}
+
+
+.controls-only{
+  display: flex;
+  gap: 4rem;
+
+
+}
+.controls-only button{
+  background-color:var(--bg-color);
+  opacity: 0.7;
+  
+}
+
+.controls-only button:hover{
+  background-color:var(--bg-color);
+  opacity: 1;
+
+ transition-duration: 120ms;
+ transition-timing-function: ease-in-out;
+  
+}
+
+
+
+
+.cards{
+  display: grid;
+  gap: 3.2rem;
+  grid-template-areas: "A B" "C D";
+
+
+}
+.card :nth-child(1){
+  grid-area: A;
+}
+.card :nth-child(2){
+  grid-area: B;
+}
+.card :nth-child(3){
+  grid-area: C;
+}
+.card :nth-child(4){
+  grid-area: D;
+}
+
+.card{
+  width: 14rem;
+  height: 16rem;
+  opacity: 0.75;
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card:hover{
+  background: var(--bg-color);
+  transform: scale(1.1);
+  transition-delay: 100ms;
+ transition-duration: 150ms;
+ transition-timing-function: ease-in-out;
+
+}
+
+.card button {
+  background-color: transparent;
+  opacity: 0.75;
+}
+.card button:hover {
+  opacity: 1;
+}
+
+
+button{
+  border: none;
+}
+
+ svg path{
+  fill: #080808ec;
+}
+
+
+.forest-active svg path,.forest-active{
+  fill: green;
+  background-color: var(--bg-color);
+  opacity: 1;
+
+}
+.rain-active svg path,.rain-active{
+  fill: blue;
+  background-color: var(--bg-color);
+  opacity: 1;
+
+}
+.bonfire-active svg path,.bonfire-active{
+  fill: rgb(215, 29, 29);
+  background-color: var(--bg-color);
+  opacity: 1;
+
+}
+.coffee-active svg path,.coffee-active{
+  fill: rgb(0, 0, 0);
+  background-color: var(--bg-color);
+  opacity: 1;
+  
+
+}
+
+
+
+
