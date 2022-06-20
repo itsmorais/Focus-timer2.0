@@ -137,7 +137,7 @@ button{
 }
 
 
-.forest-active svg path,.forest-active{
+.florest-active svg path,.florest-active{
   fill: green;
   background-color: var(--bg-color);
   opacity: 1;
