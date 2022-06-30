@@ -291,4 +291,24 @@ button{
     opacity: 0.75;
     
   }
+  #sun, #moon{
+    position: absolute;
+    top: 1.5rem;
+    right: 5rem;
+    
+  }
+  .card .slider-cont{
+    display: none;
+   }
+ 
+   .card .slider{
+    display: none;
+   }
+   
+   input[type=range]{
+     display: none;
+   }
+ 
 }
+
+
