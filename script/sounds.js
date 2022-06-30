@@ -40,6 +40,10 @@ export function Sounds() {
     playFlorest,
     playRain,
     playCoffee,
-    playBonfire
+    playBonfire,
+    florest,
+    rain,
+    coffee,
+    bonfire
   }
 }
