@@ -11,6 +11,19 @@ export function Sounds() {
   const bonfire = new Audio('./sounds/Lareira.wav')
   bonfire.loop = true
 
+  const kitchenTimer = new Audio(
+    'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
+  )
+  kitchenTimer.volume = 0.2
+
+  function endTime() {
+    kitchenTimer.play()
+    bonfire.pause()
+    rain.pause()
+    coffee.pause()
+    florest.pause()
+  }
+
   function playRain() {
     bonfire.pause()
     rain.play()
@@ -36,14 +49,23 @@ export function Sounds() {
     florest.pause()
   }
 
+  function SoundOff(){
+    bonfire.pause()
+    rain.pause()
+    coffee.pause()
+    florest.pause()
+  }
+
   return {
     playFlorest,
     playRain,
     playCoffee,
     playBonfire,
+    endTime,
     florest,
     rain,
     coffee,
-    bonfire
+    bonfire,
+    SoundOff
   }
 }

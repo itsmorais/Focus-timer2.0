@@ -15,7 +15,9 @@ import {
   volumeControlFlorest,
   volumeControlRain,
   volumeControlCoffee,
-  volumeControlBonfire
+  volumeControlBonfire,
+  buttonSoundOff,
+  buttonSoundOn
 } from './config.js'
 
 export function Events({ timer, sounds }) {
@@ -95,5 +97,22 @@ export function Events({ timer, sounds }) {
   })
   volumeControlBonfire.addEventListener('change', function () {
     sounds.bonfire.volume = volumeControlBonfire.value / 100
+  })
+
+  buttonSoundOff.addEventListener('click', function () {
+    sounds.SoundOff()
+    buttonSoundOn.classList.remove('hide')
+    buttonSoundOff.classList.add('hide')
+  })
+
+  buttonSoundOn.addEventListener('click', function () {
+    buttonSoundOn.classList.add('hide')
+    buttonSoundOff.classList.remove('hide')
+    cardFlorest.classList.add('florest-active')
+    cardCoffee.classList.remove('coffee-active')
+    cardBonfire.classList.remove('bonfire-active')
+    cardRain.classList.remove('rain-active')
+
+    sounds.playFlorest()
   })
 }

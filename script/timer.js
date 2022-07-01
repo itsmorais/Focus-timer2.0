@@ -1,15 +1,20 @@
-export function Timer({ textMinutes, textSeconds }) {
+export function Timer({ textMinutes, textSeconds, endTime }) {
   let minutes = Number(25)
   let seconds = Number(0)
   let timerDone
-  let stopTimer
 
   function countdown() {
-    timerDone = setTimeout(function anything() {
+    timerDone = setTimeout(function () {
       if (seconds == 0 && minutes == 0) {
-        stopTimer()
+        endTime()
+        reset(timerDone)
+        // Ring Bell sound not working for mobile devices, using alert instead
+        if (window.screen.width < 600) {
+          alert('Focus-Timer Over\n Well Done!')
+        }
+        return
       } else if (seconds == 0) {
-        seconds = 60
+        seconds = 2
         minutes--
       }
 
@@ -17,7 +22,6 @@ export function Timer({ textMinutes, textSeconds }) {
 
       textMinutes.textContent = String(minutes).padStart(2, '0')
       textSeconds.textContent = String(seconds).padStart(2, '0')
-      stopTimer = clearTimeout(timerDone)
 
       countdown()
     }, 1000)
@@ -44,6 +48,7 @@ export function Timer({ textMinutes, textSeconds }) {
     countdown,
     reset,
     timeUp,
-    timeDown
+    timeDown,
+    timerDone
   }
 }

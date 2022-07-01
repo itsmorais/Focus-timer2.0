@@ -22,7 +22,8 @@ const volumeControlFlorest = document.querySelector('.volumeControl-florest')
 const volumeControlRain = document.querySelector('.volumeControl-rain')
 const volumeControlCoffee = document.querySelector('.volumeControl-coffee')
 const volumeControlBonfire = document.querySelector('.volumeControl-bonfire')
-
+const buttonSoundOn = document.querySelector('.sound-on')
+const buttonSoundOff = document.querySelector('.sound-off')
 export {
   buttonPlay,
   buttonStop,
@@ -43,5 +44,7 @@ export {
   volumeControlFlorest,
   volumeControlRain,
   volumeControlCoffee,
-  volumeControlBonfire
+  volumeControlBonfire,
+  buttonSoundOff,
+  buttonSoundOn
 }

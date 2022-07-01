@@ -274,8 +274,11 @@ button{
   fill: rgb(0, 0, 0);
   background-color: var(--bg-color);
   opacity: 1;
-  
 
+}
+
+footer{
+  display: none;
 }
 
 
@@ -308,6 +311,29 @@ button{
    input[type=range]{
      display: none;
    }
+
+   .hide{
+    display: none;
+  }
+  
+  footer{
+    position: absolute;
+    display: block;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    transform: scale(0.7);
+    
+  }
+  .sound-on, .sound-off{
+    background-color: transparent;
+  }
+  .sound-on, .sound-off svg path{
+    fill: 080808ec;
+  }
+  body.dark-mode > main > footer > button.sound-off > svg path{
+    fill: #ffffff;
+  }
+
  
 }
 
