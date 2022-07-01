@@ -327,10 +327,13 @@ footer{
   .sound-on, .sound-off{
     background-color: transparent;
   }
-  .sound-on, .sound-off svg path{
-    fill: 080808ec;
+  .sound-on svg path, .sound-off svg path{
+    fill: #080808ec;
   }
   body.dark-mode > main > footer > button.sound-off > svg path{
+    fill: #ffffff;
+  }
+  body.dark-mode > main > footer > button.sound-on > svg path{
     fill: #ffffff;
   }
 
