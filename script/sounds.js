@@ -49,7 +49,7 @@ export function Sounds() {
     florest.pause()
   }
 
-  function SoundOff(){
+  function SoundOff() {
     bonfire.pause()
     rain.pause()
     coffee.pause()
