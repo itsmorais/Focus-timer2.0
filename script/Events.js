@@ -42,6 +42,8 @@ export function Events({ timer, sounds }) {
     cardBonfire.classList.remove('bonfire-active')
     cardCoffee.classList.remove('coffee-active')
     cardFlorest.classList.remove('florest-active')
+    buttonSoundOn.classList.add('hide')
+    buttonSoundOff.classList.remove('hide')
     sounds.playRain()
   })
 
@@ -50,6 +52,8 @@ export function Events({ timer, sounds }) {
     cardRain.classList.remove('rain-active')
     cardCoffee.classList.remove('coffee-active')
     cardFlorest.classList.remove('florest-active')
+    buttonSoundOn.classList.add('hide')
+    buttonSoundOff.classList.remove('hide')
     sounds.playBonfire()
   })
   cardCoffee.addEventListener('click', function () {
@@ -57,6 +61,8 @@ export function Events({ timer, sounds }) {
     cardBonfire.classList.remove('bonfire-active')
     cardRain.classList.remove('rain-active')
     cardFlorest.classList.remove('florest-active')
+    buttonSoundOn.classList.add('hide')
+    buttonSoundOff.classList.remove('hide')
     sounds.playCoffee()
   })
   cardFlorest.addEventListener('click', function () {
@@ -64,6 +70,8 @@ export function Events({ timer, sounds }) {
     cardCoffee.classList.remove('coffee-active')
     cardBonfire.classList.remove('bonfire-active')
     cardRain.classList.remove('rain-active')
+    buttonSoundOn.classList.add('hide')
+    buttonSoundOff.classList.remove('hide')
 
     sounds.playFlorest()
   })
